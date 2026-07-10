@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes">
+<meta name="theme-color" content="#f97316">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Cuadre</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden}
+iframe{width:100%;border:none;width:100%;height:100%}
+
+</style>
+</head>
+<body>
+<div id="splash" style="position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0a0d12;transition:opacity .5s"><div style="width:80px;height:80px;border-radius:18px;overflow:hidden;margin-bottom:16px;box-shadow:0 8px 32px rgba(0,0,0,.4)"><img src="icons/icon-192.png" style="width:100%;height:100%;object-fit:cover" alt=""></div><p style="color:#f97316;font-family:system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px">Cargando...</p></div><script>setTimeout(function(){var s=document.getElementById("splash");if(s){s.style.opacity="0";setTimeout(function(){s.remove()},500)}},2000)</script>
+<div id="offline-screen" style="display:none;position:fixed;inset:0;z-index:9998;background:#0a0d12;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;font-family:system-ui,sans-serif"><div style="width:64px;height:64px;border-radius:50%;background:rgba(239,68,68,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div><h2 style="color:#e8edf5;font-size:20px;font-weight:700;margin-bottom:8px">Sin conexion</h2><p style="color:#94a3b8;font-size:14px;line-height:1.6;max-width:300px">No se pudo cargar el contenido. Verifica tu conexion a internet e intenta de nuevo.</p><button onclick="location.reload()" style="margin-top:20px;padding:12px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-size:14px;font-weight:600;cursor:pointer">Reintentar</button></div><script>window.addEventListener("offline",function(){document.getElementById("offline-screen").style.display="flex"});window.addEventListener("online",function(){document.getElementById("offline-screen").style.display="none";location.reload()});</script>
+
+<iframe id="main-frame" src="https://aged-field-12b4.pedluislh.workers.dev/" allow="geolocation" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
+<script></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+</body>
+</html>
