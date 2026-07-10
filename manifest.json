@@ -1,11 +1,11 @@
 {
   "name": "Cuadre",
   "short_name": "Cuadre",
-  "description": "Cierra tu caja en 5 minutos",
-  "start_url": "https://aged-field-12b4.pedluislh.workers.dev/",
+  "description": "Cuadra tu caja en 5 minutos",
+  "start_url": "https://cuadre-2i4.pages.dev/",
   "display": "fullscreen",
   "orientation": "portrait",
-  "theme_color": "#f97316",
+  "theme_color": "#02de0a",
   "background_color": "#0a0d12",
   "icons": [
     {
