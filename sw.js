@@ -1,4 +1,4 @@
-var CACHE_NAME='com-1869apps-cuadre-v1';
+var CACHE_NAME='cu-dev1869apps-cuadre-v1';
 var CACHE_MAX=52428800;
 var TIMEOUT_MS=15000;
 
